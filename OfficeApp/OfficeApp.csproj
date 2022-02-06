@@ -8,6 +8,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.13" PrivateAssets="all" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+    <PackageReference Include="Majorsoft.Blazor.Components.Toggle" Version="1.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Majorsoft.Blazor.Components.Toggle" />
+  </ItemGroup>
 </Project>
