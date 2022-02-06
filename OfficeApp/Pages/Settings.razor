@@ -19,6 +19,7 @@
 {
     <p>
     How many cups would you prefer to drink in Moccamaster scale (i.e. 2 cups = 1 big cup)
+    <input type="number" step="2" min="0" onchange="OnCupAmountChanged" value="@_cupAmount"/>
     </p>
 }
 
@@ -42,12 +43,19 @@
     private bool _disabled = false;
     private ToggleSwitchStyle _styleType = ToggleSwitchStyle.Circle;
 
+    private int _cupAmount = 2;
+
     private ElementReference log1;
     private string _swithch1Log;
 
     private async Task OnToggleSwitched(bool val)
     {
         _value = val;
+    }
+
+    private async Task OnCupAmountChanged(int cupAmount)
+    {
+        _cupAmount = cupAmount;
     }
 }
 
