@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "OfficeApp.API/**"
   workflow_dispatch:
 
 jobs:

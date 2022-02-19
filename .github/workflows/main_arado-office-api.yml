@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "OfficeApp/**"
+
   workflow_dispatch:
 
 jobs:
@@ -19,14 +22,16 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: "5.0.x"
           include-prerelease: true
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run:
+          dotnet publish ./OfficeApp.API/OfficeApp.API.csproj -c Release -o
+          ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -38,7 +43,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'Production'
+      name: "Production"
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -51,7 +56,10 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'arado-office-api'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF3FCE24781A4D54B548687892C5D655 }}
+          app-name: "arado-office-api"
+          slot-name: "Production"
+          publish-profile:
+            ${{
+            secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF3FCE24781A4D54B548687892C5D655
+            }}
           package: .
