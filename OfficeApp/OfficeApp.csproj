@@ -14,4 +14,9 @@
   <ItemGroup>
     <None Remove="Majorsoft.Blazor.Components.Toggle" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OfficeApp.DTO\OfficeApp.DTO.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

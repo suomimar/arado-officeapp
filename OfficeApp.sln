@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.810.17
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeApp", "OfficeApp\OfficeApp.csproj", "{F4ABCD6D-3633-47B0-BA0F-34020BCEF6A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeApp.API", "OfficeApp.API\OfficeApp.API.csproj", "{4C6A82C3-29B4-4767-AD04-C60D3122BBAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeApp.DTO", "OfficeApp.DTO\OfficeApp.DTO.csproj", "{5ECE5B5D-3BA9-46D1-B7AB-7FCF423745A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F4ABCD6D-3633-47B0-BA0F-34020BCEF6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4ABCD6D-3633-47B0-BA0F-34020BCEF6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4ABCD6D-3633-47B0-BA0F-34020BCEF6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6A82C3-29B4-4767-AD04-C60D3122BBAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6A82C3-29B4-4767-AD04-C60D3122BBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6A82C3-29B4-4767-AD04-C60D3122BBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6A82C3-29B4-4767-AD04-C60D3122BBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ECE5B5D-3BA9-46D1-B7AB-7FCF423745A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECE5B5D-3BA9-46D1-B7AB-7FCF423745A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ECE5B5D-3BA9-46D1-B7AB-7FCF423745A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECE5B5D-3BA9-46D1-B7AB-7FCF423745A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

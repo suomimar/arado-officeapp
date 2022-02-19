@@ -1,0 +1,43 @@
+﻿
+<h3>@Title</h3>
+
+@if (Attendees == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Note</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var attendee in Attendees)
+        {
+            <tr>
+                <td>@attendee.Name</td>
+                <td>@attendee.Note</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public IEnumerable<Attendee> Attendees { get; set; }
+
+    public class Attendee
+    {
+        public string Name;
+        public string Note;
+    }
+
+}
